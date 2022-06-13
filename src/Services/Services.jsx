@@ -34,9 +34,9 @@ export const Services = () => {
         <button className='button s-button'>Lebenslauf</button>
 
         </a>
-
-        </div>
         <div className="blur s-blur1" style={{ background: '#ABF1FF94'}}></div> 
+        </div>
+        
         
         {/*right side  */}
         <div className="cards">
