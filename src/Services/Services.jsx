@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import {themeContext} from '../Context';
 import {useContext } from "react";
 
-
+//services and curriculum
 
 export const Services = () => {
     const transition = { duration : 1, type: 'spring'}
