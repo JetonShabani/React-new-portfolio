@@ -13,11 +13,11 @@ import {useContext } from "react";
 
 
 export const Services = () => {
-
+    const transition = { duration : 1, type: 'spring'}
     const theme =useContext(themeContext)
     const darkMode = theme.state.darkMode;
   return (
-    <div className="services">
+    <div className="services" id="Services">
         {/*left side  */}
         <div className="awesome">
         <span style={{color: darkMode? 'white': ''}}>Meine hervorragenden</span>
@@ -41,31 +41,44 @@ export const Services = () => {
         {/*right side  */}
         <div className="cards">
 
-            <div style={{ left: '14rem'}}>
+            <motion.div 
+            style={{ left: '14rem'}}
+            whileInView={{left: '14rem'}}
+            initial={{left: '25%rem'}}
+            transition={{transition}}
+            >
                 <Card
                     emoji = {heartemoji}
                     heading = {'Design'}
                     detail = {"Figma, Sketch, Photoshop, Adobe, Adobe xd"}
                 />
-            </div>
+            </motion.div>
 
             {/* second card */}
-            <div style={{ top:"12rem", left:"-4rem"}}>
+            <motion.div style={{ top:"12rem", left:"-4rem"}}
+            initial={{ left: "-11rem", top: "12rem "}}
+            whileInView={{ left: "-4rem" }}
+            transition={transition}
+            >
                 <Card 
                     emoji ={glasses}
                     heading={"Back-end"}
                     detail={"Node.js, Express, MongoDB, SQL, MySQL, SQLite, NoSQL"}
                 />
-            </div>
+            </motion.div>
 
              {/* third card */}
-             <div style={{ top:"19rem", left:"12rem"}}>
+             <motion.div style={{ top:"19rem", left:"12rem"}}
+             initial={{ top: "19rem", left:"25rem" }}
+             whileInView={{ left: "12rem" }}
+             transition={{ transition }}
+             >
                 <Card 
                     emoji ={humble}
                     heading={"Front-end"}
                     detail={"Html, Css, JavaScript, React, React Native, TypeScript, Scss"}
                 />
-            </div>
+            </motion.div>
             <div className="blur s-blur2" style={{ background: "var(--purple)" }}></div>
         </div>
 

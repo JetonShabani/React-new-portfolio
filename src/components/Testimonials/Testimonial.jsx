@@ -25,7 +25,7 @@ export const Testimonial = () => {
     ];
 
   return (
-    <div className="t-wrapper">
+    <div className="t-wrapper" id="Testimonial">
         <div className="t-heading">
             <span>sehen, was </span>
             <span>meine alten Kollegen </span>

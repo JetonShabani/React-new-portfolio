@@ -13,6 +13,7 @@ import { FloatingDiv } from '../FloatingDiv/FloatingDiv';
 import { motion } from 'framer-motion';
 import {themeContext} from '../../Context';
 import {useContext } from "react";
+import { Link } from 'react-scroll/modules';
 
 
 
@@ -31,7 +32,10 @@ export const Intro = () => {
             <span>Ein Full-Stack-Junior-Webentwickler, der eine vollständige Web-App erstellen kann, 
             sowohl im UI / UX-Design als auch im Back-End.</span>
         </div>
+        <Link spy={true} to='contact' smooth={true} >
+
         <button className="button i-button">Hire me</button>
+        </Link>
         <div className="i-icons">
             <a href="https://github.com/JetonShabani" target="_blank" rel='noreferrer'>
             <img src={github} alt="" />
@@ -55,14 +59,16 @@ export const Intro = () => {
                 initial={{top: '-4%', left: '74%'}}
                 whileInView={{left: '68%'}}
                 transition={transition}
-            style={{top: '-4%', left: '68%'}}>
+            style={{top: '-4%', left: '68%'}}
+            className='floating-div'>
                 <FloatingDiv  image={crown} txt1='Web' txt2='Developer'/>
             </motion.div>
             <motion.div 
                 initial={{left:'9rem', top:'18rem'}}
                 whileInView={{left:'0rem'}}
                 transition={transition}
-            style={{top: '18rem', left: '0rem'}}>
+            style={{top: '18rem', left: '0rem'}}
+            className='floating-div'>
                 <FloatingDiv image={thumbup} txt1='bestes Design ' txt2='garantiert' />
             </motion.div>
             {/* blur divs */}
